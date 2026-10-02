@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 16px;
+
+  font-family:
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+
+  color: #18383e;
+  background: #f3f8f7;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.app-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #123b4a;
+  font-size: 40px;
+}
+
+.app-header p {
+  margin-top: 8px;
+  color: #5c7377;
+  font-size: 14px;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 24px;
+
+  background: white;
+  border: 1px solid #cfe3df;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 24px rgba(18, 59, 74, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #123b4a;
+  font-size: 21px;
+}
+
+.description {
+  margin-bottom: 28px;
+  color: #5c7377;
+  font-size: 14px;
+}
+
+.question {
+  margin-bottom: 25px;
+}
+
+.question label {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.question input {
+  width: 100%;
+  accent-color: #1ca7a6;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+
+  color: white;
+  background: #123b4a;
+
+  border: 0;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1ca7a6;
+}
+
+.result-card {
+  text-align: center;
+}
+
+.status-badge {
+  display: inline-block;
+
+  margin: 8px 0 16px;
+  padding: 8px 20px;
+
+  border-radius: 20px;
+
+  color: white;
+  background: #1ca7a6;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.medical-notice {
+  margin-top: 24px;
+  padding: 14px;
+
+  color: #5c7377;
+  background: #eef6f4;
+
+  border-radius: 10px;
+
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+.timer-display {
+  margin: 28px 0;
+
+  color: #123b4a;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.button-group button {
+  flex: 1;
+}
+
+.secondary-button {
+  color: #123b4a;
+  background: #dff1ee;
+}
+
+.secondary-button:hover {
+  color: white;
+  background: #5c7377;
+}
+
+.break-guide {
+  padding: 16px;
+
+  color: #123b4a;
+  background: #dff3f0;
+
+  border-radius: 12px;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+}
+
+#timerStatus {
+  color: #5c7377;
+  text-align: center;
+}

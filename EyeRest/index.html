@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>EyeRest</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main class="app-container">
+    <header class="app-header">
+      <h1>EyeRest</h1>
+      <p>디지털 눈 피로 예방을 위한 휴식 관리 시스템</p>
+    </header>
+
+    <section class="card">
+      <h2>오늘의 눈 상태 확인</h2>
+
+      <div class="question">
+        <label for="fatigue">
+          눈의 피로도
+          <span><strong id="fatigueValue">0</strong>점</span>
+        </label>
+
+        <input
+          type="range"
+          id="fatigue"
+          min="0"
+          max="5"
+          value="0"
+        >
+      </div>
+
+      <div class="question">
+        <label for="dryness">
+          건조감
+          <span><strong id="drynessValue">0</strong>점</span>
+        </label>
+
+        <input
+          type="range"
+          id="dryness"
+          min="0"
+          max="5"
+          value="0"
+        >
+      </div>
+
+      <div class="question">
+        <label for="blur">
+          흐릿하게 보이는 느낌
+          <span><strong id="blurValue">0</strong>점</span>
+        </label>
+
+        <input
+          type="range"
+          id="blur"
+          min="0"
+          max="5"
+          value="0"
+        >
+      </div>
+
+      <div class="question">
+        <label for="discomfort">
+          눈 주변 불편감
+          <span><strong id="discomfortValue">0</strong>점</span>
+        </label>
+
+        <input
+          type="range"
+          id="discomfort"
+          min="0"
+          max="5"
+          value="0"
+        >
+      </div>
+
+      <button type="button" id="checkButton">
+        눈 상태 확인하기
+      </button>
+    </section>
+
+    <section id="resultCard" class="card hidden">
+      <h2>확인 결과</h2>
+
+      <div id="statusBadge" class="status-badge">
+        상태
+      </div>
+
+      <p>
+        총 불편 점수:
+        <strong id="totalScore">0</strong>점
+      </p>
+
+      <p id="resultMessage"></p>
+
+<button type="button" id="startWorkButton">
+  작업 시작하기
+</button>
+    </section>
+    <!-- 작업 타이머 화면 -->
+<section id="timerCard" class="card hidden">
+  <h2>작업 진행 중</h2>
+
+  <p id="timerStatus">
+    다음 휴식까지 남은 시간
+  </p>
+
+  <div id="timerDisplay" class="timer-display">
+    00:00
+  </div>
+
+  <div class="button-group">
+    <button type="button" id="pauseButton">
+      일시 정지
+    </button>
+
+    <button type="button" id="endWorkButton" class="secondary-button">
+      작업 종료
+    </button>
+  </div>
+</section>
+
+<!-- 휴식 화면 -->
+<section id="breakCard" class="card hidden">
+  <h2>눈 휴식 시간</h2>
+
+  <p class="break-guide">
+    화면에서 시선을 떼고 먼 곳을 바라보세요.
+  </p>
+
+  <div id="breakTimerDisplay" class="timer-display">
+    00:20
+  </div>
+
+  <p>
+    눈을 천천히 깜빡이고, 화면과 주변 조명의 밝기도 확인해 주세요.
+  </p>
+
+  <div class="button-group">
+    <button type="button" id="completeBreakButton">
+      휴식 완료
+    </button>
+
+    <button type="button" id="postponeBreakButton" class="secondary-button">
+      나중에 하기
+    </button>
+  </div>
+</section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
